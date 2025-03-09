@@ -1,3 +1,9 @@
+#Ignore executables
+*
+!*.*
+!*/
+!Makefile
+
 # Prerequisites
 *.d
 
