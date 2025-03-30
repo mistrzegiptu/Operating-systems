@@ -42,10 +42,7 @@ int main(int argc, char *argv[]){
       printf("child pid = %d, parent pid = %d\n", getpid(), getppid());
       printf("child's local = %d, child's global = %d\n", local_x, GLOBAL_X);
 
-      int execlRes = execl("/bin/ls", path);
-      printf("Execl result: %d\n", execlRes);
-
-      return execlRes;
+      execl("/bin/ls", "ls", path, NULL);
    }
    else{
       perror("Fork failed\n");
