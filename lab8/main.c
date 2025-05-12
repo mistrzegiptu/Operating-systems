@@ -16,7 +16,7 @@
 #define SEM_MUTEX "/sem_mutex"
 #define SEM_FULL  "/sem_full"
 #define SEM_EMPTY "/sem_empty"
-#define N_USERS 3
+#define N_USERS 5
 #define M_PRINTERS 2
 
 typedef struct {
