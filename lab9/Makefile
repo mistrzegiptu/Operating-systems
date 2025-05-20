@@ -9,4 +9,13 @@ main:
 clean:
 	rm -f main
 
-.PHONY: all main clean
+
+test: main
+	@echo "Testing with different numbers of threads:\n"
+	@for t in 1 2 4 8; do \
+		echo "Threads: $$t"; \
+		time ./main 0.00000001 $$t; \
+		echo "\n"; \
+	done
+
+.PHONY: all main test clean
